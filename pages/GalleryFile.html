@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Popup Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+  <style>
+  * {
+    scrollbar-width:thin;
+    scrollbar-color: #424242  #8a8a8a;
+  }
+
+  body {
+    font-family: "Jersey 10";
+    text-align: center;
+    background-image: url("../images/RainbowRoad.jpg");
+    background-repeat: repeat-y;
+    background-size: cover;
+  }
+
+  .gallery img {
+    width: 150px;
+    margin: 10px;
+    cursor: pointer;
+    transition: .3s ease;
+  }
+
+  .gallery img:hover {
+    opacity: 0.5;
+ }
+
+  .popup {
+    background: rgb(204, 203, 203);
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+    padding: 3px;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+ .popup-window-body {
+    font-family: Arial, sans-serif;
+    max-width: 99%;
+    max-height: 100%;
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+   overflow-y: auto;
+ }
+
+ .popup img {
+   width: auto;
+   display: block;
+    margin: 10px auto;
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+   font-size: 30px;
+    color: white;
+   cursor: pointer;
+  } 
+
+  .title-bar{
+    align-items: center;
+     background: linear-gradient(to right, #ce2e37, #d2771e, #d4cb1f, #81c220, #2582b5, #8f289f, #bd2f68);
+     background-color: rgba(0, 0, 0, 0);
+     background-position-x: 0%;
+     background-position-y: 0%;
+     background-repeat: repeat;
+     background-attachment: scroll;
+     background-image: linear-gradient(to right, rgb(206, 46, 55), rgb(210, 119, 30), rgb(212, 203, 31), rgb(129, 194, 32), rgb(37, 130, 181), rgb(143, 40, 159), rgb(189, 47, 104));
+      background-size: auto;
+      background-origin: padding-box;
+     background-clip: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3px;
+    padding-right: 2px;
+    padding-bottom: 9px;
+    padding-left: 3px;
+    margin-top: 3px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    height: 70px;
+    width:99%;
+    position: relative;
+    z-index: 5;
+    
+  }
+
+  .title-bar-controls button{
+    border: none;
+   border-radius: 0;
+   box-sizing: border-box;
+   color: transparent;
+   min-height: 50px;
+   min-width: 50px;
+   text-shadow: 0 0 #222;
+   background: silver;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+  }
+
+  .title-bar-controls button[aria-label="Minimize"]{
+    background-image: url(../images/IconMinimize-01.png);
+    width: 6px;
+    height: 2px;
+    background-position-x: left 3px;
+    background-position-y: bottom 4px;
+    background-repeat: no-repeat;
+  }
+
+  .title-bar-controls button[aria-label="Maximize"]{
+    background-image: url(../images/IconMaximize-01.png);
+    width: 6px;
+    height: 2px;
+    background-position-x: left 4px;
+    background-position-y: bottom 4px;
+    background-repeat: no-repeat;
+  }
+
+  .title-bar-controls button[aria-label="Close"]{
+    background-image: url(../images/IconClose-02.png);
+    width: 6px;
+    height: 2px;
+    background-position-x: left 3px;
+    background-position-y: bottom 4px;
+    background-repeat: no-repeat;
+  }
+  /*hover alteration, only make a new asset for disabled buttons, the overlay should be enough for this one. Probo on the gallery pages make the buttons like 25% bigger? make it more obvious they can hit that and give them the ability to esc out of it smile good job babe*/
+  .title-bar-controls button[aria-label="Close"]:hover{
+    background-image: url(../images/IconClose-02.png);
+    width: 6px;
+    height: 2px;
+    background-position-x: left 3px;
+    background-position-y: bottom 4px;
+    background-repeat: no-repeat;
+    background-color: gray;
+  }
+
+  .title-bar-text{
+    padding-left: 10px;
+    font-size: 1.5em;
+  }
+  </style>
+<body>
+  <div class="gallery">
+      <img src="../images/IconChappellNorm1.jpg" alt="Image 1" onclick="openPopup('popup1')">
+      <img src="../images/IconChappellNorm1.jpg" alt="Image 2" onclick="openPopup('popup2')">
+  </div>
+
+  <div class="popup" id="popup1">
+    <div class="title-bar"> 
+      <div class="title-bar-text">ChappyRoan.gallery</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize" ></button>
+        <button aria-label="Close" onclick="closePopup('popup1')" ></button>
+      </div>
+    </div>
+
+      <div class="popup-window-body">
+        <h1>Chappell Roan Gallery I</h1>
+        <h5>
+          I will kill for you, I have killed for you, I will kill again, you cannot stop me.
+        </h5>
+       <img src="../images/ChappellSquare.jpg" alt="Image 1-1" style="max-width: 60%;">
+       <img src="../images/ChappellWide.jpg" alt="Image 1-2" style="width: 90%;">
+       <img src="../images/ChappellSquare.jpg" alt="Image 1-1" style="max-width: 60%;">
+        <img src="../images/ChappellWide.jpg" alt="Image 1-2" style="width: 90%;">
+
+     </div>
+  </div>
+</div>
+  <div class="popup" id="popup2">
+    <div class="title-bar"> 
+      <div class="title-bar-text">Navigation.bar</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize" ></button>
+        <button aria-label="Close" onclick="closePopup('popup2')"></button>
+      </div>
+    </div>
+      <div class="popup-window-body">
+        <h1>Title</h1>
+        <h5>
+          Description
+          desc
+          desc
+        </h5>
+       <img src="../images/ChappellSquare.jpg" alt="Image 1-1">
+       <img src="../images/ChappellWide.jpg" alt="Image 1-2">
+       <img src="../images/ChappellSquare.jpg" alt="Image 1-1">
+        <img src="../images/ChappellWide.jpg" alt="Image 1-2">
+     </div>
+  </div>
+
+  <script>
+      function openPopup(id) {
+          document.getElementById(id).style.display = "flex";
+      }
+      function closePopup(id) {
+          document.getElementById(id).style.display = "none";
+      }
+  </script>
+</body>
+</head>
+</html>
