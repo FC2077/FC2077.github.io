@@ -5,6 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
 * {
@@ -68,16 +69,37 @@ body{
     transform: translate(-50%, 15%);
   }
 
-  .window{
+  .window1{
     background: rgb(204, 203, 203);
    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
     padding: 3px;
     position: absolute;
     width: 550px;
    z-index: 99;
+   left: 3%; 
+   top: 256px
+  }
+  .window2{
+    background: rgb(204, 203, 203);
+   box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+    padding: 3px;
+    position: absolute;
+    width: 550px;
+   z-index: 99;
+   left: 36%; 
+   top: 256px
+  }
+  .window3{
+    background: rgb(204, 203, 203);
+   box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+    padding: 3px;
+    position: absolute;
+    width: 550px;
+   z-index: 99;
+   left: 69%; 
+   top: 256px
   }
   
-
   .title-bar{
     align-items: center;
      background: linear-gradient(to right, #ce2e37, #d2771e, #d4cb1f, #81c220, #2582b5, #8f289f, #bd2f68);
@@ -406,6 +428,101 @@ figure{
     position: relative;
   }
 
+  @media only screen and (max-width: 1800px){
+    .thumb{
+  width: 100%;
+  height: 100%;
+}
+.mySlides{
+  width: 400px;
+  height: 400px;
+  margin: auto;
+}
+
+  .window1{
+    width: 450px;
+   left: 3%; 
+   top: 256px
+  }
+  .window2{
+    width: 450px;
+   left: 36%; 
+   top: 256px
+  }
+  .window3{
+    width: 450px;
+   left: 69%; 
+   top: 256px
+  }
+  }
+
+  @media only screen and (max-width: 1450px){
+    .topbar{
+    width: 700px;
+    height: 186px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 15%);
+  }
+    .thumb{
+  width: 100%;
+  height: 100%;
+}
+.mySlides{
+  width: 350px;
+  height: 350px;
+  margin: auto;
+}
+.window1{
+    width: 400px;
+   left: 3%; 
+   top: 256px
+  }
+  .window2{
+    width: 400px;
+   left: 36%; 
+   top: 256px
+  }
+  .window3{
+    width: 400px;
+   left: 69%; 
+   top: 256px
+  }
+  
+  }
+
+  @media only screen and (max-width: 1300px){
+    .thumb{
+  width: 100%;
+  height: 100%;
+}
+.mySlides{
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+  .spacer{
+  top: 1800px;
+  left: 50%;
+  transform: translate(50%, -50%);
+} 
+.window1{
+    width: 350px;
+   left: 3%; 
+   top: 256px
+  }
+  .window2{
+    width: 350px;
+   left: 36%; 
+   top: 256px
+  }
+  .window3{
+    width: 350px;
+   left: 69%; 
+   top: 256px
+  }
+  }
+
 </style>
 
 <script type="text/javascript">
@@ -673,7 +790,7 @@ figure{
     </div>
   </div>
 
-  <div class="window" style="left: 3%; top: 256px">
+  <div class="window1">
     <div class="title-bar">
       <div class="title-bar-text">Nine</div>
       <div class="title-bar-controls">
@@ -707,7 +824,7 @@ figure{
      </div>
   </div>
 
-<div class="window" style="left: 36%; top: 256px">
+<div class="window2" >
   <div class="title-bar">
     <div class="title-bar-text">Spear_Named_Poke</div>
     <div class="title-bar-controls">
@@ -744,7 +861,7 @@ figure{
 </div>
 
 
-<div class="window" style="left: 69%; top: 256px">
+<div class="window3" >
   <div class="title-bar">
     <div class="title-bar-text">Wireframe_Arizona</div>
     <div class="title-bar-controls">
