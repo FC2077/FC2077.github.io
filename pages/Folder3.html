@@ -327,7 +327,7 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 40%;
     height: 90%;
     justify-content: center;
     align-items: center;
@@ -486,6 +486,35 @@ figure{
    top: 756px
   }
   }
+
+  @supports (-webkit-appearance:none){
+  .title-bar-controls button[aria-label="Minimize"]{
+    background-image: url(images/IconMinimizeGray.png) no-repeat;
+    background-position: left 2px bottom 4px;}
+
+    .title-bar-controls button[aria-label="Maximize"]{
+    background-image: url(images/IconMaximizeGray.png) no-repeat;
+    background-position: left 3px bottom 4px;}
+
+.title-bar-controls button[aria-label="Close"]{
+    background-image: url(images/IconCloseGray.png) no-repeat;
+    background-position: left 3px bottom 4px;}
+
+.title-bar-controls-pop button[aria-label="Close-pop"]{
+  background-image: url(images/IconCloseGray.png) no-repeat;
+  background-position: left 3px bottom 4px;}
+
+  .title-bar-controls-pop button[aria-label="Maximize-pop"]{
+    background-image: url(images/IconMaximizeGray.png) no-repeat;
+    background-position: left 3px bottom 4px;}
+
+  .title-bar-controls-pop button[aria-label="Minimize-pop"]{
+    background-image: url(images/IconMinimizeGray.png) no-repeat;
+    background-position: left 2px bottom 4px;
+    width: 6px;
+    height: 2px;
+  }
+}
 
 </style>
 

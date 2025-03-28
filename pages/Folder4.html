@@ -498,6 +498,35 @@ figure{
   }
   }
 
+  @supports (-webkit-appearance:none){
+  .title-bar-controls button[aria-label="Minimize"]{
+    background-image: url(images/IconMinimizeGray.png) no-repeat;
+    background-position: left 2px bottom 4px;}
+
+    .title-bar-controls button[aria-label="Maximize"]{
+    background-image: url(images/IconMaximizeGray.png) no-repeat;
+    background-position: left 3px bottom 4px;}
+
+.title-bar-controls button[aria-label="Close"]{
+    background-image: url(images/IconCloseGray.png) no-repeat;
+    background-position: left 3px bottom 4px;}
+
+.title-bar-controls-pop button[aria-label="Close-pop"]{
+  background-image: url(images/IconCloseGray.png) no-repeat;
+  background-position: left 3px bottom 4px;}
+
+  .title-bar-controls-pop button[aria-label="Maximize-pop"]{
+    background-image: url(images/IconMaximizeGray.png) no-repeat;
+    background-position: left 3px bottom 4px;}
+
+  .title-bar-controls-pop button[aria-label="Minimize-pop"]{
+    background-image: url(images/IconMinimizeGray.png) no-repeat;
+    background-position: left 2px bottom 4px;
+    width: 6px;
+    height: 2px;
+  }
+}
+
 </style>
 
 <script type="text/javascript">
