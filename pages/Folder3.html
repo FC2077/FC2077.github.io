@@ -87,7 +87,36 @@ body{
    left: 69%; 
    top: 256px
   }
-  
+  .window4{
+    background: rgb(204, 203, 203);
+   box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+    padding: 3px;
+    position: absolute;
+    width: 550px;
+   z-index: 99;
+   left: 36%; 
+   top: 856px
+  }
+  .window5{
+    background: rgb(204, 203, 203);
+   box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+    padding: 3px;
+    position: absolute;
+    width: 550px;
+   z-index: 99;
+   left: 69%; 
+   top: 856px
+  }
+  .window6{
+    background: rgb(204, 203, 203);
+   box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+    padding: 3px;
+    position: absolute;
+    width: 550px;
+   z-index: 99;
+   left: 3%; 
+   top: 856px
+  }
 
   .title-bar{
     align-items: center;
@@ -344,6 +373,22 @@ body{
     margin: 10px auto;
   }
 
+.popup-window-body-video {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+   overflow-y: auto;
+   text-align: center;
+ }
+
+.video{
+  min-width: 80%;
+  min-height: 90%;
+}
+
   .NavBar{
   padding-top: 5px;
   padding-bottom: 5px;
@@ -369,7 +414,7 @@ body{
 
 .spacer{
   position: absolute;
-  top: 225%;
+  top: 140%;
   left: 50%;
   transform: translate(50%, -50%);
 } 
@@ -418,6 +463,21 @@ figure{
    left: 3%; 
    top: 256px
   }
+    .window4{
+    width: 450px;
+   left: 36%; 
+   top: 756px
+  }
+  .window5{
+    width: 450px;
+   left: 69%; 
+   top: 756px
+  }
+  .window6{
+    width: 450px;
+   left: 3%; 
+   top: 756px
+  }
   }
 
   @media only screen and (max-width: 1450px){
@@ -452,6 +512,21 @@ figure{
    left: 3%; 
    top: 256px
   }
+    .window4{
+    width: 500px;
+    left: 6%; 
+    top: 1256px
+  }
+  .window5{
+    width: 500px;
+    left: 60%; 
+    top: 1256px
+  }
+  .window6{
+    width: 500px;
+    left: 6%; 
+    top: 1256px
+  }
   
   }
 
@@ -485,6 +560,22 @@ figure{
    left: 3%; 
    top: 756px
   }
+   .window4{
+    width: 500px;
+    left: 6%; 
+    top: 756px
+  }
+  .window5{
+    width: 500px;
+    left: 50%; 
+    top: 1256px
+  }
+  .window6{
+    width: 500px;
+    left: 6%; 
+    top: 1256px
+  }
+
   }
 
   @supports (-webkit-appearance:none){
@@ -897,10 +988,133 @@ figure{
       </h5>
       <img src="../images/Website Art/Photo/Mike.jpg" alt="Image 1-1" style="width: 75%;">
 
+   </div>
+</div>
+<div class="window4">
+    <div class="title-bar">
+      <div class="title-bar-text">Sunset_Gallery</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <div class="mySlides" style="display:block">
+        <img class="thumb" src="../images/Website Art/Photo/SunSetCloud.jpg" alt="" onclick="openPopup('popup4')">
+      </div>
+    </div>
+  </div>
+  
+  <div class="popup-sq" id="popup4">
+    <div class="title-bar-pop"> 
+      <div class="title-bar-text-pop">sunset.gallery</div>
+      <div class="title-bar-controls-pop">
+        <button aria-label="Minimize-pop"></button>
+        <button aria-label="Maximize-pop" ></button>
+        <button aria-label="Close-pop" onclick="closePopup('popup4')" ></button>
+      </div>
+    </div>
+      <div class="popup-window-body">
+        <h1>Sunset Gallery</h1>
+        <h4>
+          Summer 2025 <br>
+         Canon Rebel T3i DSLR - Adobe Lightroom
+        </h4>
+        <h5>
+          This gallery is a series of pictures taken at sunset in Oregon.
+        </h5>
+       <img src="../images/Website Art/Photo/SunSetCloud.jpg" alt="Image 1-2" style="width: 80%;">
+       <img src="../images/Website Art/Photo/SunSetLake.jpg" alt="Image 1-2" style="width: 80%;">
+       <img src="../images/Website Art/Photo/SunSetBoy.jpg" alt="Image 1-2" style="width: 80%;">
+       <img src="../images/Website Art/Photo/SunSetWide.jpg" alt="Image 1-2" style="width: 80%;">
+
+     </div>
+  </div>
+
+  <div class="window5">
+    <div class="title-bar">
+      <div class="title-bar-text">Cat_Video</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <div class="mySlides" style="display:block">
+        <img class="thumb" src="../images/Website Art/Photo/FranklinThumboTWO.png" alt="" onclick="openPopup('popup5')">
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="popup-sq" id="popup5">
+    <div class="title-bar-pop">
+      <div class="title-bar-text-pop">catg.mp4</div>
+      <div class="title-bar-controls-pop">
+        <button aria-label="Minimize-pop"></button>
+        <button aria-label="Maximize-pop" ></button>
+        <button aria-label="Close-pop" onclick="closePopup('popup5')" ></button>
+      </div>
+    </div>
+      <div class="popup-window-body-video">
+        <h1>Cat Video</h1>
+        <h4>
+          Spring 2024 <br>
+          iPhone 13 - Premiere Pro 
+        </h4>
+        <h5>
+          <i>Catg</i> was made as an exercise in videography and narrative videomaking. 
+        </h5>
+        <iframe class="video" src="https://www.youtube.com/embed/2NgjNDAMQK4?si=XTfkR7YbNzZlPCqz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     </div>
+  </div>
+
+
+<div class="window6">
+  <div class="title-bar">
+    <div class="title-bar-text">Creek</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <div class="mySlides" style="display:block">
+      <img class="thumb" src="../images/Website Art/Photo/Creek2.jpg" alt="" onclick="openPopup('popup6')">
+    </div>
+  </div>
+</div>
+
+<div class="popup-sq" id="popup6">
+  <div class="title-bar-pop"> 
+    <div class="title-bar-text-pop">creek.gallery</div>
+    <div class="title-bar-controls-pop">
+      <button aria-label="Minimize-pop"></button>
+      <button aria-label="Maximize-pop" ></button>
+      <button aria-label="Close-pop" onclick="closePopup('popup6')" ></button>
+    </div>
+  </div>
+    <div class="popup-window-body">
+      <h1>Creek Gallery</h1>
+      <h4>
+        Fall 2024 <br>
+        Canon Rebel T3i DSLR - Adobe Lightroom
+      </h4>
+      <h5>
+        These photographs were taken along a trail in the Bay Area.
+      </h5>
+      <img src="../images/Website Art/Photo/Creek1.jpg" alt="Image 1-1" style="width: 75%;">
+      <img src="../images/Website Art/Photo/Creek2.jpg" alt="Image 1-1" style="width: 75%;">
+
+
 
    </div>
 </div>
 
+<div class="spacer" style="background-color: #0a0a0a;opacity: 0;">Stop Looking At This</div>
 
 <!---->
 
